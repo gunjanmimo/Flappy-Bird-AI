@@ -98,18 +98,20 @@ class Bird:
 def draw_window(win, bird):
     win.blit(BG_IMG, (0, 0))
     bird.draw(win)
-    pygame.displayx.update()
+    pygame.display.update()
 
 
 def main():
     bird = Bird(200, 200)
-    win = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
+
     run = True
+    pygame.init()
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+    pygame.quit()
+    quit()
 
-            draw_window(win, bird)
-        pygame.quit()
-        quit()
+
+main()
