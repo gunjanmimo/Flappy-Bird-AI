@@ -58,7 +58,8 @@ class Bird:
             d = 16
         if d < 0:
             d -= 2
-        self.y = self.y + 4
+        self.y = self.y + d
+
         if d < 0 or self.y < self.height + 50:
             if self.tilt < self.MAX_ROTATION:
                 self.tilt = self.MAX_ROTATION
