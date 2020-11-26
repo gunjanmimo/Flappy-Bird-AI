@@ -4,7 +4,7 @@ import time
 import os
 import random
 
-WIN_WIDTH = 600
+WIN_WIDTH = 500
 WIN_HEIGHT = 800
 
 BIRD_IMGS = [
@@ -105,10 +105,12 @@ def main():
     bird = Bird(200, 200)
     win = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
     run = True
+    clock = pygame.time.Clock()
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+        bird.move()
         draw_window(win, bird)
     pygame.quit()
     quit()
