@@ -1,11 +1,3 @@
-"""
-The classic game of flappy bird. Make with python
-and pygame. Features pixel perfect collision using masks :o
-
-Date Modified:  Jul 30, 2019
-Author: Tech With Tim
-Estimated Work Time: 5 hours (1 just for that damn collision)
-"""
 import os
 import random
 
@@ -291,8 +283,8 @@ def draw_window(win, birds, pipes, base, score, gen, pipe_ind):
                                  5)
                 pygame.draw.line(win, (255, 0, 0),
                                  (bird.x + bird.img.get_width() / 2, bird.y + bird.img.get_height() / 2), (
-                                 pipes[pipe_ind].x + pipes[pipe_ind].PIPE_BOTTOM.get_width() / 2,
-                                 pipes[pipe_ind].bottom), 5)
+                                     pipes[pipe_ind].x + pipes[pipe_ind].PIPE_BOTTOM.get_width() / 2,
+                                     pipes[pipe_ind].bottom), 5)
             except:
                 pass
         # draw bird
